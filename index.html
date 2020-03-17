@@ -68,6 +68,8 @@ void main()
         vec3 NN =  normalize(2.0*N.xyz-1.0);
         vec3 LL = normalize(L);
         Kd = max(dot(NN, LL), 0.0);
+        //Kd /= 0.7;
+        //Kd += 0.3;
     }
     else {
         Kd = 1.0;
