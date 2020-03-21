@@ -96,10 +96,29 @@ function mesh () {
   texCoordsArray.push(texCoord[0]);
 }
 
+render = function () {
+  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+  lightPosition[0] = 5.5 * Math.sin(0.01 * time);
+  lightPosition[2] = 5.5 * Math.cos(0.01 * time);
+
+  time += 1;
+
+  gl.uniform4fv(gl.getUniformLocation(program, 'lightPosition'), flatten(lightPosition));
+  gl.uniform1i(gl.getUniformLocation(program,
+    'apply_bump'), bumpStatus);
+  gl.uniform1i(gl.getUniformLocation(program,
+    'apply_texture'), texStatus);
+
+  gl.drawArrays(gl.TRIANGLES, 0, numVertices);
+
+  requestAnimFrame(render);
+};
+
 function loadTexture (id, val, img, uniform) {
   return function () {
     gl.activeTexture(val);
-    texture = gl.createTexture();
+    const texture = gl.createTexture();
     gl.bindTexture(gl.TEXTURE_2D, texture);
     gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB,
@@ -178,22 +197,3 @@ function applySettings () {
   bumpStatus = document.getElementById('bump-switch').checked;
   texStatus = document.getElementById('texture-switch').checked;
 }
-
-render = function () {
-  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-
-  lightPosition[0] = 5.5 * Math.sin(0.01 * time);
-  lightPosition[2] = 5.5 * Math.cos(0.01 * time);
-
-  time += 1;
-
-  gl.uniform4fv(gl.getUniformLocation(program, 'lightPosition'), flatten(lightPosition));
-  gl.uniform1i(gl.getUniformLocation(program,
-    'apply_bump'), bumpStatus);
-  gl.uniform1i(gl.getUniformLocation(program,
-    'apply_texture'), texStatus);
-
-  gl.drawArrays(gl.TRIANGLES, 0, numVertices);
-
-  requestAnimFrame(render);
-};
