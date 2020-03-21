@@ -96,7 +96,7 @@ function mesh () {
   texCoordsArray.push(texCoord[0]);
 }
 
-render = function () {
+function render () {
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
   lightPosition[0] = 5.5 * Math.sin(0.01 * time);
@@ -113,7 +113,7 @@ render = function () {
   gl.drawArrays(gl.TRIANGLES, 0, numVertices);
 
   requestAnimFrame(render);
-};
+}
 
 function loadTexture (id, val, img, uniform) {
   return function () {
