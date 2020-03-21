@@ -177,12 +177,12 @@ window.onload = function init () {
   render();
 };
 
-var bump_status = true;
-var tex_status = true;
+var bumpStatus = true;
+var texStatus = true;
 
-function apply_settings () {
-  bump_status = document.getElementById('bump-switch').checked;
-  tex_status = document.getElementById('texture-switch').checked;
+function applySettings () {
+  bumpStatus = document.getElementById('bump-switch').checked;
+  texStatus = document.getElementById('texture-switch').checked;
 }
 
 render = function () {
@@ -195,9 +195,9 @@ render = function () {
 
   gl.uniform4fv(gl.getUniformLocation(program, 'lightPosition'), flatten(lightPosition));
   gl.uniform1i(gl.getUniformLocation(program,
-    'apply_bump'), bump_status);
+    'apply_bump'), bumpStatus);
   gl.uniform1i(gl.getUniformLocation(program,
-    'apply_texture'), tex_status);
+    'apply_texture'), texStatus);
 
   gl.drawArrays(gl.TRIANGLES, 0, numVertices);
 
