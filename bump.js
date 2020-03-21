@@ -39,6 +39,9 @@ var program;
 
 var time = 0;
 
+var bumpStatus = true;
+var texStatus = true;
+
 // from glMatrix.js
 // Put in MV.js
 
@@ -189,9 +192,6 @@ window.onload = function init () {
 
   render();
 };
-
-var bumpStatus = true;
-var texStatus = true;
 
 function applySettings () {
   bumpStatus = document.getElementById('bump-switch').checked;
