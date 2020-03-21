@@ -6,6 +6,7 @@ SPDX-License-Identifier: MIT
 
 # Computer Graphics Demo
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/311ed455543a462f9d8827f04566f4cd)](https://app.codacy.com/manual/theodedeken/computer-graphics-demo?utm_source=github.com&utm_medium=referral&utm_content=theodedeken/computer-graphics-demo&utm_campaign=Badge_Grade_Dashboard)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 TODO: Put more badges here.
 
