@@ -43,7 +43,7 @@ var time = 0;
 // Put in MV.js
 
 function mat4ToInverseMat3 (mat) {
-  dest = mat3();
+  const dest = mat3();
 
   var a00 = mat[0][0];
   var a01 = mat[0][1];
