@@ -1,11 +1,15 @@
+<!--
+SPDX-FileCopyrightText: 2020 Theo Dedeken
+
+SPDX-License-Identifier: MIT
+-->
+
 # Computer Graphics Demo
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 TODO: Put more badges here.
 
 A small demo of bump mapping using WebGL
-
-TODO: Fill out this long description.
 
 ## Table of Contents
 
@@ -14,21 +18,29 @@ TODO: Fill out this long description.
   - [Background](#background)
   - [Install](#install)
   - [Usage](#usage)
+    - [Local](#local)
+    - [Server](#server)
   - [Maintainers](#maintainers)
   - [Contributing](#contributing)
   - [License](#license)
 
 ## Background
+This demo came about as a part of an assignment for a lecture about Computer Graphics.
+I was asked to demonstrate the different shader steps (vertex and fragment).
+I chose to demonstrate an example of bump mapping.
 
 ## Install
 
+Clone the repository
 ```
+git clone https://github.com/theodedeken/computer-graphics-demo
 ```
 
 ## Usage
-
-```
-```
+### Local
+Use your favorite local html server to use and view the demo. 
+### Server
+Fork the project and turn on Github Pages on your master branch
 
 ## Maintainers
 
@@ -36,10 +48,15 @@ TODO: Fill out this long description.
 
 ## Contributing
 
-
-
 Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
 
 MIT © 2020 Theo Dedeken
+
+This work is licensed under multiple licences. 
+
+* All original source code is licensed under MIT.
+* The images are licensed under CC0-1.0
+* The files in `common/` are licensed under their original licenses: MIT and BSD-3-Clause
+

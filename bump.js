@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2020 Theo Dedeken
+//
+// SPDX-License-Identifier: MIT
+
 var canvas;
 var gl;
 

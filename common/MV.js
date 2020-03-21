@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2020 Dave Schreiner
+// SPDX-FileCopyrightText: 2020 Ed Angel
+//
+// SPDX-License-Identifier: MIT
+
 /// ///////////////////////////////////////////////////////////////////////////
 //
 //  Angel.js

@@ -1,0 +1,10 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Computer Graphics Demo
+Upstream-Contact: Theo Dedeken <theo.dedeken@telenet.be>
+Source: www.theodedeken.xyz/computer-graphics-demo
+
+# Sample paragraph, commented out:
+#
+# Files: src/*
+# Copyright: $YEAR $NAME <$CONTACT>
+# License: ...
