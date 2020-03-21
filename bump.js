@@ -96,6 +96,20 @@ function mesh () {
   texCoordsArray.push(texCoord[0]);
 }
 
+function loadTexture (id, val, img, uniform) {
+  return function () {
+    gl.activeTexture(val);
+    texture = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB,
+      gl.RGB, gl.UNSIGNED_BYTE, img);
+    gl.generateMipmap(gl.TEXTURE_2D);
+
+    gl.uniform1i(gl.getUniformLocation(program, uniform), id);
+  };
+}
+
 window.onload = function init () {
   canvas = document.getElementById('gl-canvas');
 
@@ -138,32 +152,12 @@ window.onload = function init () {
 
   // Load texture
   const img = new Image();
-  img.onload = function () {
-    gl.activeTexture(gl.TEXTURE1);
-    texture = gl.createTexture();
-    gl.bindTexture(gl.TEXTURE_2D, texture);
-    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB,
-      gl.RGB, gl.UNSIGNED_BYTE, img);
-    gl.generateMipmap(gl.TEXTURE_2D);
-
-    gl.uniform1i(gl.getUniformLocation(program, 'texture'), 1);
-  };
+  img.onload = loadTexture(1, gl.TEXTURE1, img, 'texture');
   img.src = 'img/Brick_Wall_010_COLOR.gif';
 
   // Load normal map
   const norm = new Image();
-  norm.onload = function () {
-    gl.activeTexture(gl.TEXTURE0);
-    texture = gl.createTexture();
-    gl.bindTexture(gl.TEXTURE_2D, texture);
-    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB,
-      gl.RGB, gl.UNSIGNED_BYTE, norm);
-    gl.generateMipmap(gl.TEXTURE_2D);
-
-    gl.uniform1i(gl.getUniformLocation(program, 'normalMap'), 0);
-  };
+  norm.onload = loadTexture(0, gl.TEXTURE0, norm, 'normalMap');
   norm.src = 'img/Brick_Wall_010_NORM.gif';
 
   gl.uniform4fv(gl.getUniformLocation(program, 'lightPosition'), flatten(lightPosition));
