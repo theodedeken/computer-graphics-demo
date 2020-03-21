@@ -7,7 +7,6 @@ SPDX-License-Identifier: MIT
 # Computer Graphics Demo
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-TODO: Put more badges here.
 
 A small demo of bump mapping using WebGL
 
@@ -32,7 +31,7 @@ I chose to demonstrate an example of bump mapping.
 ## Install
 
 Clone the repository
-```
+```bash
 git clone https://github.com/theodedeken/computer-graphics-demo
 ```
 
