@@ -1,0 +1,14 @@
+name: REUSE compliant
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Check REUSE compliance
+        uses: docker://fsfe/reuse
+        with:
+          args: reuse lint

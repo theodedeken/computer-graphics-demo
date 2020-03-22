@@ -54,9 +54,10 @@ Small note: If editing the README, please conform to the [standard-readme](https
 
 MIT © 2020 Theo Dedeken
 
-This work is licensed under multiple licences. 
+This work is licensed under multiple licences: 
 
 * All original source code is licensed under MIT.
 * The images are licensed under CC0-1.0
 * The files in `common/` are licensed under their original licenses: MIT and BSD-3-Clause
 
+All the files in this repo are licensed according to the [REUSE](https://reuse.software/) specification
