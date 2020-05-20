@@ -5,10 +5,9 @@ SPDX-License-Identifier: MIT
 -->
 
 # Computer Graphics Demo
-
-[![REUSE compliant](https://github.com/theodedeken/computer-graphics-demo/workflows/REUSE%20compliant/badge.svg)](https://reuse.software/)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/311ed455543a462f9d8827f04566f4cd)](https://app.codacy.com/manual/theodedeken/computer-graphics-demo?utm_source=github.com&utm_medium=referral&utm_content=theodedeken/computer-graphics-demo&utm_campaign=Badge_Grade_Dashboard)
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/theodedeken/computer-graphics-demo/REUSE%20compliant?label=REUSE%20compliant&style=for-the-badge)](https://reuse.software/)
+[![Codacy grade](https://img.shields.io/codacy/grade/311ed455543a462f9d8827f04566f4cd?style=for-the-badge)](https://app.codacy.com/manual/theodedeken/computer-graphics-demo?utm_source=github.com&utm_medium=referral&utm_content=theodedeken/computer-graphics-demo&utm_campaign=Badge_Grade_Dashboard)
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=for-the-badge)](https://github.com/RichardLitt/standard-readme)
 
 A small demo of bump mapping using WebGL.
 
